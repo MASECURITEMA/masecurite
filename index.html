@@ -31,44 +31,12 @@
       z-index: 1000;
     }
 
-    /* Barre de navigation similaire à Somfy */
-    .navbar {
-      background-color: #F9F9F9;
-      border-bottom: 1px solid #ddd;
-      padding: 15px 0;
-      position: sticky; /* Utilisez 'sticky' pour faire défiler avec la page */
-      top: 50px; /* Ajustement pour compenser la hauteur de la barre de contact */
-      z-index: 999;
-    }
-    .navbar ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      margin: 0;
-      padding: 0;
-    }
-    .navbar ul li {
-      margin: 0 20px;
-    }
-    .navbar ul li a {
-      text-decoration: none;
-      color: #333;
-      font-size: 1.1em;
-      padding: 10px 15px;
-      border-radius: 5px;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-    .navbar ul li a:hover {
-      background-color: #FFCC00;
-      color: white;
-    }
-
     /* Style du titre principal */
     h1 {
       text-align: center;
       margin-bottom: 20px;
       color: #333;
-      margin-top: 100px; /* Ajustez pour compenser la hauteur des barres fixes */
+      margin-top: 60px; /* Réduit la marge pour rapprocher le titre du haut */
     }
 
     /* Style de la grille des catégories avec 4 par ligne */
@@ -112,12 +80,6 @@
       .grid-container {
         grid-template-columns: 1fr; /* Une colonne pour les petits écrans */
       }
-      .navbar ul {
-        flex-direction: column;
-      }
-      .navbar ul li {
-        margin: 10px 0;
-      }
     }
 
     /* Carte Google Maps */
@@ -148,17 +110,6 @@
 <div class="contact-info">
   📞 Téléphone : +212 123 456 789 | <a href="https://wa.me/212123456789" style="color: white;">💬 WhatsApp</a>
 </div>
-
-<!-- Barre de navigation similaire à Somfy -->
-<nav class="navbar">
-  <ul>
-    <li><a href="#idees-projet">Idée Projet</a></li>
-    <li><a href="#solutions">Solutions</a></li>
-    <li><a href="#produits">Produits</a></li>
-    <li><a href="#aide">Aide</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
 
 <!-- Titre principal de la page -->
 <h1>Nos Catégories de Produits</h1>
