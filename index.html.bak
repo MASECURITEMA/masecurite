@@ -39,7 +39,7 @@
       margin-top: 60px; /* Réduit la marge pour rapprocher le titre du haut */
     }
 
-    /* Style de la grille des catégories avec 4 par ligne */
+    /* Style de la grille des catégories */
     .grid-container {
       display: grid;
       gap: 20px;
@@ -54,6 +54,9 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       position: relative;
       height: 200px; /* Fixe la hauteur des éléments de la grille */
+      display: flex; /* Flex pour centrer le contenu */
+      flex-direction: column; /* Colonne pour le texte */
+      justify-content: flex-end; /* Aligne le texte en bas */
     }
     .grid-item:hover {
       transform: scale(1.05);
@@ -66,8 +69,6 @@
       display: block;
     }
     .grid-item h2 {
-      position: absolute;
-      bottom: 0;
       width: 100%;
       text-align: center;
       padding: 10px;
@@ -87,6 +88,9 @@
     @media (max-width: 480px) {
       .grid-container {
         grid-template-columns: 1fr; /* Une colonne pour les très petits écrans */
+      }
+      .grid-item {
+        height: 150px; /* Ajuste la hauteur pour les petits écrans */
       }
     }
 
