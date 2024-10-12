@@ -39,7 +39,7 @@
       margin-top: 60px; /* Réduit la marge pour rapprocher le titre du haut */
     }
 
-    /* Style de la grille des catégories */
+    /* Style de la grille des catégories avec 4 par ligne */
     .grid-container {
       display: grid;
       gap: 20px;
@@ -53,10 +53,6 @@
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       position: relative;
-      height: 200px; /* Fixe la hauteur des éléments de la grille */
-      display: flex; /* Flex pour centrer le contenu */
-      flex-direction: column; /* Colonne pour le texte */
-      justify-content: flex-end; /* Aligne le texte en bas */
     }
     .grid-item:hover {
       transform: scale(1.05);
@@ -64,11 +60,12 @@
     }
     .grid-item img {
       width: 100%;
-      height: 100%; /* Remplit toute la hauteur du conteneur */
-      object-fit: cover; /* Maintient le rapport d'aspect de l'image tout en remplissant le conteneur */
+      height: auto;
       display: block;
     }
     .grid-item h2 {
+      position: absolute;
+      bottom: 0;
       width: 100%;
       text-align: center;
       padding: 10px;
@@ -81,16 +78,10 @@
     /* Media Queries pour mobiles */
     @media (max-width: 768px) {
       .grid-container {
-        grid-template-columns: repeat(2, 1fr); /* Deux colonnes pour les petits écrans */
+        grid-template-columns: 1fr; /* Une colonne pour les petits écrans */
       }
-    }
-    
-    @media (max-width: 480px) {
-      .grid-container {
-        grid-template-columns: 1fr; /* Une colonne pour les très petits écrans */
-      }
-      .grid-item {
-        height: 150px; /* Ajuste la hauteur pour les petits écrans */
+      h1 {
+        font-size: 1.5em; /* Ajuste la taille du titre sur les petits écrans */
       }
     }
 
@@ -114,6 +105,12 @@
       padding: 20px;
       margin-top: 40px;
     }
+
+    /* Sélecteur de langue */
+    .language-selector {
+      text-align: right;
+      margin-bottom: 20px;
+    }
   </style>
 </head>
 <body>
@@ -123,6 +120,15 @@
   📞 Téléphone : +212 123 456 789 | <a href="https://wa.me/212123456789" style="color: white;">💬 WhatsApp</a>
 </div>
 
+<!-- Sélecteur de langue -->
+<div class="language-selector">
+  <label for="language">Langue:</label>
+  <select id="language">
+    <option value="fr">Français</option>
+    <option value="ar">عربي</option>
+  </select>
+</div>
+
 <!-- Titre principal de la page -->
 <h1>Nos Catégories de Produits</h1>
 
@@ -130,73 +136,73 @@
 <div class="grid-container">
   <div class="grid-item">
     <a href="categorie1.html">
-      <img src="image1.jpg" alt="Catégorie 1">
+      <img src="image1.jpg" alt="Description de la Catégorie 1">
       <h2>Catégorie 1</h2>
     </a>
   </div>
   <div class="grid-item">
     <a href="categorie2.html">
-      <img src="image2.jpg" alt="Catégorie 2">
+      <img src="image2.jpg" alt="Description de la Catégorie 2">
       <h2>Catégorie 2</h2>
     </a>
   </div>
   <div class="grid-item">
     <a href="categorie3.html">
-      <img src="image3.jpg" alt="Catégorie 3">
+      <img src="image3.jpg" alt="Description de la Catégorie 3">
       <h2>Catégorie 3</h2>
     </a>
   </div>
   <div class="grid-item">
     <a href="categorie4.html">
-      <img src="image4.jpg" alt="Catégorie 4">
+      <img src="image4.jpg" alt="Description de la Catégorie 4">
       <h2>Catégorie 4</h2>
     </a>
   </div>
   <div class="grid-item">
     <a href="categorie5.html">
-      <img src="image5.jpg" alt="Catégorie 5">
+      <img src="image5.jpg" alt="Description de la Catégorie 5">
       <h2>Catégorie 5</h2>
     </a>
   </div>
   <div class="grid-item">
     <a href="categorie6.html">
-      <img src="image6.jpg" alt="Catégorie 6">
+      <img src="image6.jpg" alt="Description de la Catégorie 6">
       <h2>Catégorie 6</h2>
     </a>
   </div>
   <div class="grid-item">
     <a href="categorie7.html">
-      <img src="image7.jpg" alt="Catégorie 7">
+      <img src="image7.jpg" alt="Description de la Catégorie 7">
       <h2>Catégorie 7</h2>
     </a>
   </div>
   <div class="grid-item">
     <a href="categorie8.html">
-      <img src="image8.jpg" alt="Catégorie 8">
+      <img src="image8.jpg" alt="Description de la Catégorie 8">
       <h2>Catégorie 8</h2>
     </a>
   </div>
   <div class="grid-item">
     <a href="categorie9.html">
-      <img src="image9.jpg" alt="Catégorie 9">
+      <img src="image9.jpg" alt="Description de la Catégorie 9">
       <h2>Catégorie 9</h2>
     </a>
   </div>
   <div class="grid-item">
     <a href="categorie10.html">
-      <img src="image10.jpg" alt="Catégorie 10">
+      <img src="image10.jpg" alt="Description de la Catégorie 10">
       <h2>Catégorie 10</h2>
     </a>
   </div>
   <div class="grid-item">
     <a href="categorie11.html">
-      <img src="image11.jpg" alt="Catégorie 11">
+      <img src="image11.jpg" alt="Description de la Catégorie 11">
       <h2>Catégorie 11</h2>
     </a>
   </div>
   <div class="grid-item">
     <a href="categorie12.html">
-      <img src="image12.jpg" alt="Catégorie 12">
+      <img src="image12.jpg" alt="Description de la Catégorie 12">
       <h2>Catégorie 12</h2>
     </a>
   </div>
@@ -206,13 +212,13 @@
 <div class="map-container">
   <iframe 
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509577!2d144.9537353156822!3d-37.816279979751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11c0ef%3A0x5045675218ceed30!2sMelbourne%20Central!5e0!3m2!1sen!2sau!4v1618825613526!5m2!1sen!2sau" 
-    allowfullscreen>
-  </iframe>
+    allowfullscreen="" 
+    loading="lazy"></iframe>
 </div>
 
 <!-- Pied de page -->
 <footer>
-  <p>&copy; 2024 Masecurite. Tous droits réservés.</p>
+  <p>&copy; 2024 Votre Entreprise. Tous droits réservés.</p>
 </footer>
 
 </body>
