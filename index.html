@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page de produits - Style Somfy</title>
+  <style>
+    /* Style global pour tout le site */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+
+    /* Barre de contact fixe */
+    .contact-info {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 1.2em;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    /* Barre de navigation similaire à Somfy */
+    .navbar {
+      background-color: #F9F9F9;
+      border-bottom: 1px solid #ddd;
+      padding: 15px 0;
+      position: sticky;
+      top: 50px; /* ajustement si la barre de contact est fixe */
+      z-index: 999;
+    }
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar ul li {
+      margin: 0 20px;
+    }
+    .navbar ul li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 1.1em;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .navbar ul li a:hover {
+      background-color: #FFCC00;
+      color: white;
+    }
+
+    /* Style du titre principal */
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+      margin-top: 40px; /* Ajuster la marge pour compenser la hauteur des barres fixes */
+    }
+
+    /* Style de la grille des catégories avec 4 par ligne */
+    .grid-container {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(4, 1fr); /* 4 colonnes */
+      margin-bottom: 40px;
+    }
+    .grid-item {
+      background-color: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+    .grid-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+    .grid-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .grid-item h2 {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      margin: 0;
+      font-size: 1.2em;
+    }
+
+    /* Media Queries pour mobiles */
+    @media (max-width: 768px) {
+      .grid-container {
+        grid-template-columns: 1fr; /* Une colonne pour les petits écrans */
+      }
+      .navbar ul {
+        flex-direction: column;
+      }
+      .navbar ul li {
+        margin: 10px 0;
+      }
+    }
+
+    /* Carte Google Maps */
+    .map-container {
+      margin-top: 20px;
+      width: 100%;
+      height: 400px;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Pied de page */
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Barre de contact fixe en haut de la page -->
+<div class="contact-info">
+  📞 Téléphone : +212 123 456 789 | <a href="https://wa.me/212123456789" style="color: white;">💬 WhatsApp</a>
+</div>
+
+<!-- Barre de navigation similaire à Somfy -->
+<nav class="navbar">
+  <ul>
+    <li><a href="#idees-projet">Idée Projet</a></li>
+    <li><a href="#solutions">Solutions</a></li>
+    <li><a href="#produits">Produits</a></li>
+    <li><a href="#aide">Aide</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Titre principal de la page -->
+<h1>Nos Catégories de Produits</h1>
+
+<!-- Grille des catégories de produits avec 12 catégories, 4 par ligne -->
+<div class="grid-container">
+  <div class="grid-item">
+    <a href="categorie1.html">
+      <img src="image1.jpg" alt="Catégorie 1">
+      <h2>Catégorie 1</h2>
+    </a>
+  </div>
+  <div class="grid-item">
+    <a href="categorie2.html">
+      <img src="image2.jpg" alt="Catégorie 2">
+      <h2>Catégorie 2</h2>
+    </a>
+  </div>
+  <div class="grid-item">
+    <a href="categorie3.html">
+      <img src="image3.jpg" alt="Catégorie 3">
+      <h2>Catégorie 3</h2>
+    </a>
+  </div>
+  <div class="grid-item">
+    <a href="categorie4.html">
+      <img src="image4.jpg" alt="Catégorie 4">
+      <h2>Catégorie 4</h2>
+    </a>
+  </div>
+  <div class="grid-item">
+    <a href="categorie5.html">
+      <img src="image5.jpg" alt="Catégorie 5">
+      <h2>Catégorie 5</h2>
+    </a>
+  </div>
+  <div class="grid-item">
+    <a href="categorie6.html">
+      <img src="image6.jpg" alt="Catégorie 6">
+      <h2>Catégorie 6</h2>
+    </a>
+  </div>
+  <div class="grid-item">
+    <a href="categorie7.html">
+      <img src="image7.jpg" alt="Catégorie 7">
+      <h2>Catégorie 7</h2>
+    </a>
+  </div>
+  <div class="grid-item">
+    <a href="categorie8.html">
+      <img src="image8.jpg" alt="Catégorie 8">
+      <h2>Catégorie 8</h2>
+    </a>
+  </div>
+  <div class="grid-item">
+    <a href="categorie9.html">
+      <img src="image9.jpg" alt="Catégorie 9">
+      <h2>Catégorie 9</h2>
+    </a>
+  </div>
+  <div class="grid-item">
+    <a href="categorie10.html">
+      <img src="image10.jpg" alt="Catégorie 10">
+      <h2>Catégorie 10</h2>
+    </a>
+  </div>
+  <div class="grid-item">
+    <a href="categorie11.html">
+      <img src="image11.jpg" alt="Catégorie 11">
+      <h2>Catégorie 11</h2>
+    </a>
+  </div>
+  <div class="grid-item">
+    <a href="categorie12.html">
+      <img src="image12.jpg" alt="Catégorie 12">
+      <h2>Catégorie 12</h2>
+    </a>
+  </div>
+</div>
+
+<!-- Section de la carte Google Maps -->
+<div class="map-container">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509577!2d144.9537353156822!3d-37.816279979751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11c0ef%3A0x5045675218ceed30!2sYour%20Store%20Name!5e0!3m2!1sen!2sfr!4v1616334773721!5m2!1sen!2sfr" 
+    allowfullscreen="" 
+    loading="lazy">
+  </iframe>
+</div>
+
+<!-- Pied de page -->
+<footer>
+  <p>&copy; 2024 Votre Entreprise. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>
