@@ -36,7 +36,8 @@
       background-color: #F9F9F9;
       border-bottom: 1px solid #ddd;
       padding: 15px 0;
-      position: relative; /* Changer sticky à relative */
+      position: sticky; /* Utilisez 'sticky' pour faire défiler avec la page */
+      top: 50px; /* Ajustement pour compenser la hauteur de la barre de contact */
       z-index: 999;
     }
     .navbar ul {
@@ -60,7 +61,6 @@
     .navbar ul li a:hover {
       background-color: #FFCC00;
       color: white;
-      transition: color 0.3s ease; /* Ajout de la transition ici */
     }
 
     /* Style du titre principal */
@@ -68,7 +68,7 @@
       text-align: center;
       margin-bottom: 20px;
       color: #333;
-      margin-top: 40px; /* Ajuster la marge pour compenser la hauteur des barres fixes */
+      margin-top: 100px; /* Ajustez pour compenser la hauteur des barres fixes */
     }
 
     /* Style de la grille des catégories avec 4 par ligne */
@@ -89,7 +89,6 @@
     .grid-item:hover {
       transform: scale(1.05);
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-      background-color: #f9f9f9; /* Changer la couleur de fond au survol */
     }
     .grid-item img {
       width: 100%;
@@ -112,9 +111,6 @@
     @media (max-width: 768px) {
       .grid-container {
         grid-template-columns: 1fr; /* Une colonne pour les petits écrans */
-      }
-      .navbar {
-        position: relative; /* Assurez-vous que cela est également défini pour les mobiles */
       }
       .navbar ul {
         flex-direction: column;
@@ -156,7 +152,6 @@
 <!-- Barre de navigation similaire à Somfy -->
 <nav class="navbar">
   <ul>
-    <li><a href="index.html">Accueil</a></li> <!-- Lien vers la page d'accueil -->
     <li><a href="#idees-projet">Idée Projet</a></li>
     <li><a href="#solutions">Solutions</a></li>
     <li><a href="#produits">Produits</a></li>
@@ -244,14 +239,17 @@
   </div>
 </div>
 
-<!-- Intégration de Google Maps -->
+<!-- Section de la carte Google Maps -->
 <div class="map-container">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345096915!2d144.95373631531793!3d-37.816279979751474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11f2f3%3A0x5045675218ceed60!2sMelbourne%20CBD%2C%20Melbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1632092153291!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509577!2d144.9537353156822!3d-37.816279979751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11c0ef%3A0x5045675218ceed30!2sMelbourne%20Central!5e0!3m2!1sen!2sau!4v1618825613526!5m2!1sen!2sau" 
+    allowfullscreen>
+  </iframe>
 </div>
 
 <!-- Pied de page -->
 <footer>
-  &copy; 2024 Votre Entreprise. Tous droits réservés.
+  <p>&copy; 2024 Masecurite. Tous droits réservés.</p>
 </footer>
 
 </body>
