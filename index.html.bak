@@ -53,6 +53,7 @@
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       position: relative;
+      height: 200px; /* Fixe la hauteur des éléments de la grille */
     }
     .grid-item:hover {
       transform: scale(1.05);
@@ -60,7 +61,8 @@
     }
     .grid-item img {
       width: 100%;
-      height: auto;
+      height: 100%; /* Remplit toute la hauteur du conteneur */
+      object-fit: cover; /* Maintient le rapport d'aspect de l'image tout en remplissant le conteneur */
       display: block;
     }
     .grid-item h2 {
@@ -78,7 +80,13 @@
     /* Media Queries pour mobiles */
     @media (max-width: 768px) {
       .grid-container {
-        grid-template-columns: 1fr; /* Une colonne pour les petits écrans */
+        grid-template-columns: repeat(2, 1fr); /* Deux colonnes pour les petits écrans */
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .grid-container {
+        grid-template-columns: 1fr; /* Une colonne pour les très petits écrans */
       }
     }
 
