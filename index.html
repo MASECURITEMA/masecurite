@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page de produits - Style Somfy</title>
+  <title>Page de produits</title>
   <style>
     /* Style global pour tout le site */
     * {
@@ -75,7 +75,13 @@
       font-size: 1.2em;
     }
 
-    /* Media Queries pour mobiles */
+    /* Media Queries pour tablettes et mobiles */
+    @media (max-width: 1024px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes pour tablettes */
+      }
+    }
+
     @media (max-width: 768px) {
       .grid-container {
         grid-template-columns: 1fr; /* Une colonne pour les petits écrans */
@@ -118,73 +124,73 @@
 <div class="grid-container">
   <div class="grid-item">
     <a href="categorie1.html">
-      <img src="image1.jpg" alt="Catégorie 1">
-      <h2>Catégorie 1</h2>
+      <img src="images/categorie/image1.jpg" alt="Catégorie 1">
+      <h2>MOTORISATIONS et ACCESSOIRES</h2>
     </a>
   </div>
   <div class="grid-item">
     <a href="categorie2.html">
-      <img src="image2.jpg" alt="Catégorie 2">
-      <h2>Catégorie 2</h2>
+      <img src="images/categorie/image2.jpg" alt="Catégorie 2">
+      <h2>TELECOMMANDES PORTAIL</h2>
     </a>
   </div>
   <div class="grid-item">
     <a href="categorie3.html">
-      <img src="image3.jpg" alt="Catégorie 3">
-      <h2>Catégorie 3</h2>
+      <img src="images/categorie/image3.jpg" alt="Catégorie 3">
+      <h2>RFID</h2>
     </a>
   </div>
   <div class="grid-item">
     <a href="categorie4.html">
-      <img src="image4.jpg" alt="Catégorie 4">
-      <h2>Catégorie 4</h2>
+      <img src="images/categorie/image4.jpg" alt="Catégorie 4">
+      <h2>CAMERA</h2>
     </a>
   </div>
   <div class="grid-item">
     <a href="categorie5.html">
-      <img src="image5.jpg" alt="Catégorie 5">
-      <h2>Catégorie 5</h2>
+      <img src="images/categorie/image5.jpg" alt="Catégorie 5">
+      <h2>SMART LOCK</h2>
     </a>
   </div>
   <div class="grid-item">
     <a href="categorie6.html">
-      <img src="image6.jpg" alt="Catégorie 6">
-      <h2>Catégorie 6</h2>
+      <img src="images/categorie/image6.jpg" alt="Catégorie 6">
+      <h2>DOMOTIQUE</h2>
     </a>
   </div>
   <div class="grid-item">
     <a href="categorie7.html">
-      <img src="image7.jpg" alt="Catégorie 7">
+      <img src="images/categorie/image7.jpg" alt="Catégorie 7">
       <h2>Catégorie 7</h2>
     </a>
   </div>
   <div class="grid-item">
     <a href="categorie8.html">
-      <img src="image8.jpg" alt="Catégorie 8">
+      <img src="images/categorie/image8.jpg" alt="Catégorie 8">
       <h2>Catégorie 8</h2>
     </a>
   </div>
   <div class="grid-item">
     <a href="categorie9.html">
-      <img src="image9.jpg" alt="Catégorie 9">
+      <img src="images/categorie/image9.jpg" alt="Catégorie 9">
       <h2>Catégorie 9</h2>
     </a>
   </div>
   <div class="grid-item">
     <a href="categorie10.html">
-      <img src="image10.jpg" alt="Catégorie 10">
+      <img src="images/categorie/image10.jpg" alt="Catégorie 10">
       <h2>Catégorie 10</h2>
     </a>
   </div>
   <div class="grid-item">
     <a href="categorie11.html">
-      <img src="image11.jpg" alt="Catégorie 11">
+      <img src="images/categorie/image11.jpg" alt="Catégorie 11">
       <h2>Catégorie 11</h2>
     </a>
   </div>
   <div class="grid-item">
     <a href="categorie12.html">
-      <img src="image12.jpg" alt="Catégorie 12">
+      <img src="images/categorie/image12.jpg" alt="Catégorie 12">
       <h2>Catégorie 12</h2>
     </a>
   </div>

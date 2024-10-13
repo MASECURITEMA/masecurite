@@ -26,17 +26,25 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       padding: 10px;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 250px; /* Hauteur fixe pour uniformiser */
+      overflow: hidden; /* Empêche le débordement */
     }
     .product-item img {
       width: 100%;
-      height: auto;
+      height: 130px; /* Augmentation de la hauteur des images */
+      object-fit: contain; /* Garde l'image entière visible sans déformation */
       border-radius: 10px;
+      margin: 0 auto; /* Centre l'image */
     }
     .product-item h2 {
-      margin: 10px 0 5px;
+      margin: 5px 0; /* Réduction de la marge */
     }
     .product-item p {
       color: #333;
+      margin-top: 5px; /* Réduction de la marge entre le titre et le prix */
     }
   </style>
 </head>
@@ -45,19 +53,29 @@
 <h1>Produits de Catégorie 1</h1>
 <div class="product-container">
   <div class="product-item">
-    <img src="produit1.jpg" alt="Produit 1">
-    <h2>Produit 1</h2>
+    <img src="images/telecommandes/NICE-SMILOSM2.jpg" alt="Produit 1">
+    <h2>NICE-SMILOSM2</h2>
     <p>Prix : 100 MAD</p>
   </div>
   <div class="product-item">
-    <img src="produit2.jpg" alt="Produit 2">
-    <h2>Produit 2</h2>
-    <p>Prix : 150 MAD</p>
+    <img src="images/telecommandes/SOMFY-KEYGOT4PRORTS.jpg" alt="Produit 2">
+    <h2>SOMFY-KEYGOT4PRORTS</h2>
+    <p>Prix : 100 MAD</p>
   </div>
   <div class="product-item">
-    <img src="produit3.jpg" alt="Produit 3">
-    <h2>Produit 3</h2>
-    <p>Prix : 200 MAD</p>
+    <img src="images/telecommandes/GENIUS-ECHOTX4.jpg" alt="Produit 3">
+    <h2>GENIUS-ECHOTX4</h2>
+    <p>Prix : 100 MAD</p>
+  </div>
+  <div class="product-item">
+    <img src="images/telecommandes/V2-PHOXCONTRAT474CH.jpg" alt="Produit 4">
+    <h2>V2-PHOXCONTRAT474CH</h2>
+    <p>Prix : 100 MAD</p>
+  </div>
+  <div class="product-item">
+    <img src="images/telecommandes/YET2129.jpg" alt="Produit 5">
+    <h2>Produit 5</h2>
+    <p>Prix : 100 MAD</p>
   </div>
   <!-- Ajoutez plus de produits ici -->
 </div>
