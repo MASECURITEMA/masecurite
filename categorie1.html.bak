@@ -11,6 +11,20 @@
       margin: 0;
       padding: 20px;
     }
+
+    /* Barre de contact fixe */
+    .contact-info {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 1.2em;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
     h1 {
       text-align: center;
     }
@@ -31,6 +45,8 @@
       justify-content: space-between;
       height: 250px; /* Hauteur fixe pour uniformiser */
       overflow: hidden; /* Empêche le débordement */
+      text-decoration: none; /* Enlève le soulignement du lien */
+      color: black; /* Couleur du texte des liens */
     }
     .product-item img {
       width: 100%;
@@ -49,34 +65,39 @@
   </style>
 </head>
 <body>
+<!-- Barre de contact fixe en haut de la page -->
+<div class="contact-info">
+  📞 Tél: +212 661 999 604 | <a href="https://wa.me/212661999604" style="color: white;">💬 WhatsApp</a>
+</div>
 
 <h1>Produits de Catégorie 1</h1>
+
 <div class="product-container">
-  <div class="product-item">
+  <a href="lien_vers_le_produit_1" class="product-item">
     <img src="images/telecommandes/NICE-SMILOSM2.jpg" alt="Produit 1">
-    <h2>Produit 1</h2>
+    <h2>NICE-SMILOSM2</h2>
     <p>Prix : 100 MAD</p>
-  </div>
-  <div class="product-item">
+  </a>
+  <a href="SOMFY-KEYGOT4PRORTS.html" class="product-item">
     <img src="images/telecommandes/SOMFY-KEYGOT4PRORTS.jpg" alt="Produit 2">
-    <h2>Produit 2</h2>
+    <h2>SOMFY-KEYGOT4PRORTS</h2>
     <p>Prix : 100 MAD</p>
-  </div>
-  <div class="product-item">
+  </a>
+  <a href="lien_vers_le_produit_3" class="product-item">
     <img src="images/telecommandes/GENIUS-ECHOTX4.jpg" alt="Produit 3">
-    <h2>Produit 3</h2>
+    <h2>GENIUS-ECHOTX4</h2>
     <p>Prix : 100 MAD</p>
-  </div>
-  <div class="product-item">
+  </a>
+  <a href="lien_vers_le_produit_4" class="product-item">
     <img src="images/telecommandes/V2-PHOXCONTRAT474CH.jpg" alt="Produit 4">
-    <h2>Produit 4</h2>
+    <h2>V2-PHOXCONTRAT474CH</h2>
     <p>Prix : 100 MAD</p>
-  </div>
-  <div class="product-item">
+  </a>
+  <a href="lien_vers_le_produit_5" class="product-item">
     <img src="images/telecommandes/YET2129.jpg" alt="Produit 5">
     <h2>Produit 5</h2>
     <p>Prix : 100 MAD</p>
-  </div>
+  </a>
   <!-- Ajoutez plus de produits ici -->
 </div>
 
